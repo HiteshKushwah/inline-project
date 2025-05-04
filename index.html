@@ -14,10 +14,19 @@
   <h1>Welcome to My Simple Project</h1>
   <button onclick="greet()">Click Me</button>
 
+  <p id="time"></p>
+
   <script>
     function greet() {
       alert("Hello from Inline JavaScript!");
     }
+
+    function showTime() {
+      const now = new Date();
+      document.getElementById("time").innerText = now.toLocaleTimeString();
+    }
+
+    setInterval(showTime, 1000); // new feature - live clock
   </script>
 </body>
 </html>
